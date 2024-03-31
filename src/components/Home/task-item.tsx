@@ -14,13 +14,13 @@ type Props = {
 
 export const TaskItem: React.FC<Props> = ({ task, onMarkAsDone, onRemoveTask }) => {
   const handlemarkAsDoneItem = () => {
-    console.log('opa taskitem');
     onMarkAsDone(task.id as string);
   };
   const handleRemoveTaskItem = () => {
-    console.log('opa taskitem');
     onRemoveTask(task.id as string);
   };
+
+  const text = task.done ? 'line-through' : 'none';
   return (
     <div
       style={{
@@ -34,7 +34,15 @@ export const TaskItem: React.FC<Props> = ({ task, onMarkAsDone, onRemoveTask }) 
       <a style={{ cursor: 'pointer' }} onClick={handlemarkAsDoneItem}>
         <img src={task.done ? marked : check} alt="" />
       </a>
-      <span style={{ textDecoration: 'line-through', color: defaultTheme['gray-300'], fontSize: '16px', maxWidth: '90%', wordWrap: 'break-word' }}>
+      <span
+        style={{
+          textDecoration: `${text}`,
+          color: defaultTheme['gray-300'],
+          fontSize: '16px',
+          maxWidth: '90%',
+          wordWrap: 'break-word'
+        }}
+      >
         {task.description}
       </span>
       <a style={{ cursor: 'pointer' }} onClick={handleRemoveTaskItem}>

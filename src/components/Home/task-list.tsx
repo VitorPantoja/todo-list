@@ -14,12 +14,10 @@ type Props = {
 
 export const TaskList: React.FC<Props> = ({ tasksList = [], onMarkTaskAsDone, onRemoveTask }) => {
   const handleMarkTaskAsDone = (id: string): void => {
-    console.log('opa tasklit');
     onMarkTaskAsDone(id);
   };
 
   const handleRemoveTask = (id: string): void => {
-    console.log('opa tasklit');
     onRemoveTask(id);
   };
 
@@ -38,7 +36,9 @@ export const TaskList: React.FC<Props> = ({ tasksList = [], onMarkTaskAsDone, on
             width: '100%',
             gap: '0.5rem',
             flexDirection: 'column',
-            padding: '2% 0'
+            padding: '2% 0',
+            overflowY: 'auto',
+            maxHeight: '500px'
           }}
         >
           {tasksList.map(task => (

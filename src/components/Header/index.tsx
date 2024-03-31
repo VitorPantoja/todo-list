@@ -21,7 +21,7 @@ export const Header: React.FC<Props> = ({ onCreateTask }) => {
   };
 
   const handleCreateTask = () => {
-    if (onCreateTask) onCreateTask({ id: uuidv4(), done: false, description: taskDescription, title: 'teste' } as Task);
+    if (onCreateTask) onCreateTask({ id: uuidv4(), done: false, description: taskDescription || '', title: 'teste' } as Task);
   };
 
   return (
@@ -30,18 +30,15 @@ export const Header: React.FC<Props> = ({ onCreateTask }) => {
         <img src={logo} alt="" />
       </HeaderContainer>
       <ContainerInput>
-        <form
-          action="/"
+        <div
           style={{ display: 'flex', width: '100%', alignContent: 'center', justifyContent: 'space-between', gap: '0.5rem' }}
           onSubmit={handleCreateTask}
         >
           <Input placeholder="Adicione um nova tarefa" onChange={handleSetTaskDescription} />
-          <HomeButton type="submit" style={{ padding: '12px' }}>
-            <a style={{ display: 'flex', justifyContent: 'center', alignContent: 'space-between', gap: '0.5rem', cursor: 'pointer' }}>
-              Criar <img src={button} alt="" />
-            </a>
+          <HomeButton type="submit" onClick={handleCreateTask}>
+            Criar <img src={button} alt="" />
           </HomeButton>
-        </form>
+        </div>
       </ContainerInput>
     </>
   );

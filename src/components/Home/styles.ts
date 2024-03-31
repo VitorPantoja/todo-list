@@ -53,16 +53,9 @@ export const HomeButton = styled.button`
   color: ${props => props.theme['gray-100']};
   background-color: ${props => props.theme['blueDark']};
   border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  gap: 0.5rem;
+  cursor: pointer;
 `;
-// export const Input = styled.input`
-//   padding: 10px;
-//   border: 1px solid #ddd;
-//   border-radius: 4px;
-//   width: 100%;
-//   box-sizing: border-box;
-
-//   &:focus {
-//     outline: none;
-//     border-color: #999;
-//   }
-// `

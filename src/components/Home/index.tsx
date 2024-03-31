@@ -17,7 +17,6 @@ export const Home: React.FC<Props> = ({ tasksList, onMarkTaskAsDone, onRemoveTas
   };
 
   const handleRemoveTask = (id: string): void => {
-    console.log('opa home');
     onRemoveTask(id);
   };
 
@@ -34,8 +33,8 @@ export const Home: React.FC<Props> = ({ tasksList, onMarkTaskAsDone, onRemoveTas
             marginBottom: '2%'
           }}
         >
-          <TaskProgress tittle="Tarefas criadas" color="blue" />
-          <TaskProgress tittle="Concluídas" color="purpleDark" />
+          <TaskProgress tittle="Tarefas criadas" color="blue" count={tasksList?.length} />
+          <TaskProgress tittle="Concluídas" color="purpleDark" count={tasksList?.filter(task => task.done).length} />
         </div>
         <TaskList color="gray-300" tasksList={tasksList} onRemoveTask={handleRemoveTask} onMarkTaskAsDone={handleMarkTaskAsDone} />
       </div>
