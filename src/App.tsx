@@ -1,9 +1,9 @@
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 
-import { Router } from './Router'
-import { GlobalStyle } from './styles/global'
-import { defaultTheme } from './styles/theme/default'
-import { ThemeProvider } from 'styled-components'
+import { Router } from './Router';
+import { GlobalStyle } from './styles/global';
+import { defaultTheme } from './styles/theme/default';
+import { ThemeProvider } from 'styled-components';
 
 export const App = () => {
   return (
@@ -13,5 +13,5 @@ export const App = () => {
       </BrowserRouter>
       <GlobalStyle />
     </ThemeProvider>
-  )
-}
+  );
+};

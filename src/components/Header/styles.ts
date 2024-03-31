@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
@@ -11,4 +11,4 @@ export const HeaderContainer = styled.header`
   height: 12.5rem; /* Definindo a altura para 100% da viewport */
   width: 100%;
   z-index: 1; /* Set a base z-index */
-`
+`;

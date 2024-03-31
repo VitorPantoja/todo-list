@@ -8,9 +8,7 @@
   "extends": [
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "plugin:react-hooks/recommended"
   ],
   "plugins": [
     "@typescript-eslint",
@@ -18,8 +16,7 @@
     "react-hooks",
     "jsx-a11y",
     "import",
-    "import-helpers",
-    "react"
+    "import-helpers"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -103,15 +100,7 @@
     },
     "import/resolver": {
       "typescript": {
-        "alwaysTryTypes": true
-      },
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "alwaysTryTypes": false
       }
     }
   }
