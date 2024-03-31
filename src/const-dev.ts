@@ -11,11 +11,7 @@ export const tasks: Task[] = [
   {
     id: 1,
     title: 'Criar um novo projeto',
-    description: `Criar um novo projeto para o cliente X aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaXXXXXXXXXXXXX
-      aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`,
+    description: `Criar um novo projeto para o cliente 1`,
     createdAt: new Date(),
     updatedAt: new Date(),
     done: false
